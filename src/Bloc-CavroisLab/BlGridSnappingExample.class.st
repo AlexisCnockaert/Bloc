@@ -47,17 +47,16 @@ BlGridSnappingExample >> createDraggableElement [
 
 { #category : #initialization }
 BlGridSnappingExample >> createGridLines [
-	"Create vertical grid lines every 20 pixels"
 
 	| spaceWidth gridSpacing |
 	spaceWidth := 600.
-	gridSpacing := 40. 
+	gridSpacing := 40.
 
 	0 to: spaceWidth by: gridSpacing do: [ :x |
 			| gridLine |
 			gridLine := BlElement new
 				            extent: 1 @ 400;
-				            "1 pixel wide, full height"background: Color lightGray;
+				            background: Color lightGray;
 				            position: x @ 0.
 			space addChild: gridLine ]
 ]
@@ -87,7 +86,6 @@ BlGridSnappingExample >> openInSpace [
 
 { #category : #running }
 BlGridSnappingExample >> run [
-	"Run the example"
 
 	<script: 'BlGridSnappingExample new openInSpace'>
 	
